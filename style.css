@@ -61,13 +61,29 @@ body::before {
 
 .nav__mobile-menu {
     display: none;
+    cursor: pointer;
 }
 
+@keyframes menu_animation {
+    0% {
+        transform: scale(.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 .nav__list {
+    transform: scale(1);
     list-style: none;
     display: flex;
     gap: 4rem;
     align-items: center;
+    animation-name: menu_animation;
+    animation-duration: 1s;
+    animation-delay: 0s;
 }
 
 .nav__list-item__link {
@@ -116,6 +132,10 @@ body::before {
     font-family: var(--font-family-barlow-c);
     border-radius: 1rem;
     margin-right: 1rem;
+    display: flex;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .main__tag {
@@ -123,6 +143,8 @@ body::before {
     letter-spacing: 0.2rem;
     font-family: var(--font-family-barlow-c);
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
 .main__title {
@@ -176,7 +198,6 @@ button {
     .nav__list {
         display: flex;
         flex-direction: column;
-        width: 80%;
         position: absolute;
         background: white;
         z-index: 10;
@@ -186,6 +207,9 @@ button {
         box-shadow: 0 0.2rem 1rem 0rem rgba(0, 0, 0, 0.4);
         display: none;
         transition: display 0.5s;
+        margin-inline: 2rem;
+        left: 0;
+        right: 0;
     }
 
 
