@@ -81,9 +81,6 @@ body::before {
     display: flex;
     gap: 4rem;
     align-items: center;
-    animation-name: menu_animation;
-    animation-duration: 1s;
-    animation-delay: 0s;
 }
 
 .nav__list-item__link {
