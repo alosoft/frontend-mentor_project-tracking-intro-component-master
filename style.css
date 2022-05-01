@@ -192,6 +192,22 @@ button {
         padding-inline: 2rem;
     }
 
+    @keyframes menu_slide_in {
+        100% {
+            top: 6rem;
+        }
+    }
+
+    @keyframes menu_slide_out {
+        0% {
+            top: 6rem;
+        }
+
+        100% {
+            top: -15rem;
+        }
+    }
+
     .nav__list {
         display: flex;
         flex-direction: column;
@@ -199,14 +215,14 @@ button {
         background: white;
         z-index: 10;
         gap: 1.5rem;
-        top: 6rem;
+        top: -15rem;
         padding-block: 1.5rem;
         box-shadow: 0 0.2rem 1rem 0rem rgba(0, 0, 0, 0.4);
-        display: none;
-        transition: display 0.5s;
         margin-inline: 2rem;
         left: 0;
         right: 0;
+        animation-duration: .7s;
+        animation-fill-mode: forwards;
     }
 
 
@@ -219,7 +235,7 @@ button {
         display: flex;
     }
 
-    .change__menu{
+    .change__menu {
         content: url('./images/icon-close.svg');
     }
 
