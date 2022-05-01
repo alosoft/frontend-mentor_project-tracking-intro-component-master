@@ -5,7 +5,6 @@ const nav = document.querySelector('.nav__list');
 
 
 mobile__menu.addEventListener('click', () => {
-    console.log(Boolean(nav.style.animationName && nav.style.animationName === 'menu_slide_in'))
     
     if (nav.style.animationName && nav.style.animationName === 'menu_slide_in') {
         nav.style.animationName = 'menu_slide_out';
